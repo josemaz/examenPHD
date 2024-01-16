@@ -4,7 +4,7 @@ subtitle: José María Zamora Fuentes
 comite: "Comité Tutoral: Dr. Jesús Espinal Enríquez <br>
 Dra. Patricia García López <br>
 Dr. Luis Mendoza Sierra"
-date: Enero, 2023
+fecha: Enero, 2023
 institute: Universidad Nacional Autónoma de México
 css: file.css
 theme: white

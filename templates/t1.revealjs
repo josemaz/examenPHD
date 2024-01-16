@@ -55,8 +55,8 @@ $endif$
 $for(institute)$
   <p class="institute">$institute$</h1>
 $endfor$
-$if(date)$
-  <p class="date">$date$</p>
+$if(fecha)$
+  <p class="fecha">$fecha$</p>
 $endif$
 $for(comite)$
   <p class="comite">$comite$</p>
