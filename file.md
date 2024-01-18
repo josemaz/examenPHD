@@ -26,7 +26,7 @@ slideNumber: h.v
 	- Dr. Felix Recillas Targa
 	- Dra. Lorena Aguilar Arnal
 	- Dr. Alejandro García Carranca
-	- Dra. Patricia López 
+	- Dra. Patricia García López 
 - Tutor
 	- Dr. Jesus Espinal Enriquez
 - Presentes
