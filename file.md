@@ -25,6 +25,8 @@ slideNumber: h.v
 - Tutor
 - Presentes
 
+### Descripción
+Breve descripción del trabajo en el tiempo.
 
 
 ### Introducción
@@ -85,7 +87,7 @@ Encontrar **genes clave** que son afectados por **miRNAs** o por **metilación**
 - Cáncer "silencioso" (ausencia de síntomas).
 - 80% de los casos se diagnostican de manera incidental en imágenes solicitadas por otros motivos,
 - de estos casos, el 20% son diagnosticados en etapas avanzadas,
-- de este porcentaje la tasa de mortalidad es del 95% a los 5 años.
+- en este porcentaje la tasa de mortalidad es del 95% a los 5 años.
 - Factores de riesgo:  fumar, hipertensión, obesidad, diabetes.
 <p style="font-size: 14px; text-align: left;">
 <a target="_blank" href="">[2]</a>James J. Hsieh, et al. "Renal cell carcinoma". Nature Reviews Disease Primers 3. 1(2017).</p>
@@ -118,11 +120,15 @@ Encontrar **genes clave** que son afectados por **miRNAs** o por **metilación**
 
 ### Coexpresión Gen-Gen (mRNA)
 
+### Expresión en función de la progresión del CRcc
+<img src="img/BoxPlot_genesProgression.png" width="70%">
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">[3]</a>Jose Maria Zamora-Fuentes, et al. "Gene Expression and Co-expression Networks Are Strongly Altered Through Stages in Clear Cell Renal Carcinoma". Frontiers in Genetics 11. (2020).</p>
+
 ### Redes de coexpresión genética
 <img src="img/mRNA-redes2.png" width="70%">
 <p style="font-size: 14px; text-align: left;">
 <a target="_blank" href="">[3]</a>Jose Maria Zamora-Fuentes, et al. "Gene Expression and Co-expression Networks Are Strongly Altered Through Stages in Clear Cell Renal Carcinoma". Frontiers in Genetics 11. (2020).</p>
-
 
 ### Enriquecimiento Biológico
 <img src="img/mRNA-redesenrich.jpeg" width="70%">
