@@ -1,10 +1,11 @@
 ---
 title: Cambios en los patrones genéticos y epigenéticos en las etapas de progresión del cáncer
 subtitle: José María Zamora Fuentes
-comite: "Comité Tutoral: Dr. Jesús Espinal Enríquez <br>
+comite: "Comité Tutoral: <br>
+Dr. Jesús Espinal Enríquez <br>
 Dra. Patricia García López <br>
 Dr. Luis Mendoza Sierra"
-fecha: Enero, 2023
+fecha: Enero, 2024
 institute: Universidad Nacional Autónoma de México
 css: file.css
 theme: white
