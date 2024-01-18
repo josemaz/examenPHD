@@ -22,7 +22,12 @@ slideNumber: h.v
 
 ### Agradecimientos iniciales
 - Jurado
+	- Dr. Felix Recillas Targa
+	- Dra. Lorena Aguilar Arnal
+	- Dr. Alejandro García Carranca
+	- Dra. Patricia López 
 - Tutor
+	- Dr. Jesus Espinal Enriquez
 - Presentes
 
 ### Descripción
