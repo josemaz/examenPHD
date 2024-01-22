@@ -128,10 +128,6 @@ Encontrar **genes clave** que son afectados por **miRNAs** o por **metilación**
 
 ### Coexpresión Gen-Gen (mRNA)
 
-### Expresión en función de la progresión del CRcc
-<img src="img/BoxPlot_genesProgression.png" width="70%">
-<p style="font-size: 14px; text-align: left;">
-<a target="_blank" href="">[3]</a>Jose Maria Zamora-Fuentes, et al. "Gene Expression and Co-expression Networks Are Strongly Altered Through Stages in Clear Cell Renal Carcinoma". Frontiers in Genetics 11. (2020).</p>
 
 ### Redes de coexpresión genética
 <img src="img/mRNA-redes2.png" width="70%">
@@ -142,6 +138,12 @@ Encontrar **genes clave** que son afectados por **miRNAs** o por **metilación**
 <img src="img/mRNA-redesenrich.jpeg" width="70%">
 <p style="font-size: 14px; text-align: left;">
 <a target="_blank" href="">[3]</a>Jose Maria Zamora-Fuentes, et al. "Gene Expression and Co-expression Networks Are Strongly Altered Through Stages in Clear Cell Renal Carcinoma". Frontiers in Genetics 11. (2020).</p>
+
+### Expresión en función de la progresión del CRcc
+<img src="img/BoxPlot_genesProgression.png" width="70%">
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">[3]</a>Jose Maria Zamora-Fuentes, et al. "Gene Expression and Co-expression Networks Are Strongly Altered Through Stages in Clear Cell Renal Carcinoma". Frontiers in Genetics 11. (2020).</p>
+
 
 
 ### Regulación genética por microRNAs
