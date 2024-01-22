@@ -31,8 +31,10 @@ slideNumber: h.v
 	- Dr. Jesus Espinal Enriquez
 - Presentes
 
-### Descripción
-Breve descripción del trabajo en el tiempo.
+### Descripción del trabajo
+- El tiempo
+- Resultados en Equipo
+- El camino de la biología
 
 
 ### Introducción
@@ -179,11 +181,13 @@ Encontrar **genes clave** que son afectados por **miRNAs** o por **metilación**
 ### Conclusiones
 <img src="img/resumen-final.png" width="75%">
 
-### Implicaciones
+### Implicaciones (1)
 - La identificación de factores genéticos y epigenéticos que son resultado de experimentos complejos, pueden proveer de nuevas hipótesis con este tipo de métodos computacionales (ingeniería reversa).
 - Los resultados in-silico nos pueden proveer de evidencia para  biomarcadores con potencial aplicación clínica.
+
+### Implicaciones (2)
 - Los resultados de estos experimentos computacionales destacan el impacto del caracter inmunológico del cáncer.
-- El programa de expresión en cáncer tiene afectaciones debido a patrones regulares en genes particulares que se amplifican como un sistema biológico complejo.
+- El programa de expresión en cáncer tiene afectaciones debido a patrones regulares en genes específicos que se amplifican como un sistema biológico complejo.
 
 
 ### Trabajo futuro
