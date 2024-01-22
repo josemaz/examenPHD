@@ -31,7 +31,7 @@ slideNumber: h.v
 	- Dr. Jesus Espinal Enriquez
 - Presentes
 
-### Descripción del trabajo
+### Breve descripción del trabajo
 - El tiempo
 - Resultados en Equipo
 - El camino de la biología
