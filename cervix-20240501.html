@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Estudio multi-ómico en Cáncer de Cervix</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
+  <link rel="stylesheet" href="file.css"/>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Estudio multi-ómico en Cáncer de Cervix</h1>
+  <h2 class="subtitle">Dr. José María Zamora Fuentes</p>
+  <p class="institute">Intituto Nacional de Medicina Genómica</h1>
+  <p class="fecha">Abril, 2024</p>
+</section>
+
+
+
+<section id="tópicos" class="slide level3">
+<h3>Tópicos</h3>
+<ul>
+<li>Introducción</li>
+<li>Hipótesis</li>
+<li>Objetivo</li>
+<li>Metodología</li>
+<li>Resultados preliminares</li>
+<li>Resumen</li>
+</ul>
+</section>
+<section id="agradecimientos-iniciales" class="slide level3">
+<h3>Agradecimientos iniciales</h3>
+<ul>
+<li>INCAN - Laboratorio de Cáncer y Virus</li>
+<li>Dr. Alejandro Carranca</li>
+<li>Grupo de Genómica Computacional (INMEGEN)</li>
+<li>Dr. Jesús Espinal Enríquez</li>
+<li>Presentes</li>
+</ul>
+</section>
+<section id="introducción" class="slide level3">
+<h3>Introducción</h3>
+</section>
+<section id="cáncer" class="slide level3">
+<h3>Cáncer</h3>
+<p><img src="img/Cancer.png"></p>
+</section>
+<section id="progresión-del-cáncer" class="slide level3">
+<h3>Progresión del Cáncer</h3>
+<img src="img/Etapas.png" width="70%">
+<p style="font-size: 12px; text-align: left;">
+<a target="_blank" href="">[1]</a> Stephen B. Edge, et al. “The American
+Joint Committee on Cancer: the 7th Edition of the AJCC Cancer Staging
+Manual and the Future of TNM”. Annals of Surgical Oncology 17. 6(2010):
+1471–1474.
+</p>
+</section>
+<section id="regulación-genética-y-epigenética" class="slide level3">
+<h3>Regulación genética y epigenética</h3>
+<p><img src="img/Regulacion.png" width="90%"></p>
+</section>
+<section id="fuentes-de-datos" class="slide level3">
+<h3>Fuentes de datos</h3>
+<ul>
+<li>TCGA (The Cancer Genome Atlas)
+<ul>
+<li>11,300 pacientes</li>
+<li>más de 30 tejidos de cáncer.</li>
+<li>Secuenciación de RNA
+<ul>
+<li>mRNA</li>
+<li>miRNA</li>
+</ul></li>
+<li>Secuenciación de 450K sitios CpG
+<p style="font-size: 12px; text-align: left;">
+<a target="_blank" href="">[1]</a>The Cancer Genome Atlas Research
+Network. “Before and After: Comparison of Legacy and Harmonized TCGA
+Genomic Data Commons Data”. Cell Systems. 2019;9(1):24-34.e10.
+</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="biología-de-sistemas" class="slide level3">
+<h3>Biología de sistemas</h3>
+<p><img src="img/BiologiaDeSistemas.png" width="95%"></p>
+</section>
+<section id="sistema-complejo" class="slide level3">
+<h3>Sistema Complejo</h3>
+<p><img src="img/SistemaComplejo.png" width="95%"></p>
+</section>
+<section id="planteamiento-del-problema" class="slide level3">
+<h3>Planteamiento del problema</h3>
+<p>La <strong>progresión del cáncer de cervix</strong> es un fenómeno
+multi-factorial en el que los componentes genéticos y epigenéticos están
+fuertemente involucrados. Actualmente, no se sabe con certeza cuál es la
+<strong>conexión</strong> entre estos dos factores durante la progresión
+del cáncer.</p>
+</section>
+<section id="hipótesis" class="slide level3">
+<h3>Hipótesis</h3>
+<p>Con nuestra metodología podemos describir los <strong>posibles
+mecanismos subyacentes</strong> de control regulatorio llevados a cabo
+por miRNAs y por metilación sobre genes involucrados en la progresión
+del cáncer de cervix.</p>
+</section>
+<section id="objetivo" class="slide level3">
+<h3>Objetivo</h3>
+<p>Encontrar <strong>genes clave</strong> que son afectados por
+<strong>miRNAs</strong> o por <strong>metilación</strong>. Estos genes
+cambian su programa regulatorio, de expresión y de
+<strong>co-expresión</strong> durante <br> la progresión del cáncer de
+cervix.</p>
+</section>
+<section id="metodología" class="slide level3">
+<h3>Metodología</h3>
+</section>
+<section id="flujo-de-trabajo" class="slide level3">
+<h3>Flujo de trabajo</h3>
+<p><img src="img/workflow.png" width="75%"></p>
+</section>
+<section id="caso-de-estudio-carcinomas-de-cervix-cc"
+class="slide level3">
+<h3>Caso de estudio: Carcinomas de Cervix (CC)</h3>
+<ul>
+<li>Globalmente, es el cuarto cáncer más frecuentemente diagnosticado en
+mujeres.</li>
+<li>En etapas avanzadas es uno de los cánceres más letales.</li>
+<li>La vacunación para HPV mitiga los riesgos de padecer CC.</li>
+<li>Factores de riesgo: Contagio sexual de HPV. Menos frecuentemente por
+vía perinatal.</li>
+<li>¿Cuales son sus características histopatológicas?
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">[2]</a>Ran et al., “Advances in Exosome
+Biomarkers for Cervical Cancer.”.
+</p></li>
+</ul>
+</section>
+<section id="cc---características-moleculares-1" class="slide level3">
+<h3>CC - Características Moleculares (1)</h3>
+<ul>
+<li>El desarrollo de CC requiere la infección con HPV de linajes
+altamente carcinogénicos.</li>
+<li>El linaje 16 es la variante de HPV más asociada con CC.</li>
+<li>También están HPV18, HPV45 y HPV31.</li>
+<li>Existen “pocos” biomarcadores de mRNA para diferenciar tejido
+maligno de no-canceroso.
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">[2]</a>Tsikouras et al., “Cervical Cancer:
+Screening, Diagnosis and Staging.”
+</p></li>
+</ul>
+</section>
+<section id="cc---características-moleculares-2" class="slide level3">
+<h3>CC - Características Moleculares (2)</h3>
+<ul>
+<li>¿Marcadores de subtipificación?</li>
+<li>Busqueda de marcadores para las células NK (NKG2D).</li>
+<li>Busqueda de miRNAs asociados a sistema inmune (miR-21 and
+miR-143).</li>
+<li>Marcadores de metilación que el grupo (INCAN) ya conoce.</li>
+<li>¿Cómo es la infiltración del sistema inmune en el tumor?.
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">[2]</a>Tsikouras et al., “Cervical Cancer:
+Screening, Diagnosis and Staging.”
+</p></li>
+</ul>
+</section>
+<section id="muestras-de-ccrc" class="slide level3">
+<h3>Muestras de ccRC</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Control</th>
+<th style="text-align: center;">Etapa I</th>
+<th style="text-align: center;">Etapa II</th>
+<th style="text-align: center;">Etapa III_IV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">162</td>
+<td style="text-align: center;">69</td>
+<td style="text-align: center;">66</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="omicas-harmonizadas" class="slide level3">
+<h3>Omicas harmonizadas</h3>
+<p><img src="img/venn-cases.png" width="50%"></p>
+</section>
+<section id="concepto-de-coexpresión" class="slide level3">
+<h3>Concepto de coexpresión</h3>
+</section>
+<section id="construcción-inicial" class="slide level3">
+<h3>Construcción inicial</h3>
+<p><img src="img/correlacion.png" width="75%"></p>
+</section>
+<section id="construcción-de-redes-de-coexpresión" class="slide level3">
+<h3>Construcción de redes de coexpresión</h3>
+<p><img src="img/redes-start.jpeg" width="75%"></p>
+</section>
+<section id="resultados" class="slide level3">
+<h3>Resultados</h3>
+</section>
+<section id="coexpresión-gen-gen-mrna" class="slide level3">
+<h3>Coexpresión Gen-Gen (mRNA)</h3>
+</section>
+<section id="redes-de-coexpresión-genética" class="slide level3">
+<h3>Redes de coexpresión genética</h3>
+<p><img src="img/mRNA-redes3.png" width="80%"></p>
+</section>
+<section id="microambiente" class="slide level3">
+<h3>Microambiente</h3>
+<img src="img/microambiente.png" width="80%">
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">[1]</a>Yoshihara K, Inferring tumour purity
+and stromal and immune cell admixture from expression data. Nat Commun.
+2013;4(1):2612.
+</p>
+</section>
+<section id="trabajo-actual-y-futuro" class="slide level3">
+<h3>Trabajo actual y futuro</h3>
+<ul>
+<li>Enriquecer las redes que se conservan en las cuatro etapas de
+CC.</li>
+<li>Encontrar los genes que escalan progresivamente en CC.</li>
+<li>Anotar los miRNAs correctamnte.</li>
+<li>Encontrar los miRNAs que cumplen los filtros en las cuatro etapas de
+CC.</li>
+<li>Limpiar los perfiles de metilación.</li>
+<li>Encontrar los genes que cambian su perfil de metilación en el
+promotor.</li>
+</ul>
+</section>
+<section id="gracias" class="slide level3">
+<h3>¡Gracias!</h3>
+<ul>
+<li>Dr. Jose Maria Zamora Fuentes</li>
+<li>josema.genomics@gmail.com</li>
+<li>https://github.com/josemaz</li>
+<li>¡Pueden contactarme los estudiantes interesados!</li>
+</ul>
+</section>
+<section id="apéndice" class="slide level3">
+<h3>Apéndice</h3>
+</section>
+<section id="enriquecimiento-biológico" class="slide level3">
+<h3>Enriquecimiento Biológico</h3>
+<img src="img/mRNA-redesenrich.jpeg" width="70%">
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">[3]</a>Jose Maria Zamora-Fuentes, et
+al. “Gene Expression and Co-expression Networks Are Strongly Altered
+Through Stages in Clear Cell Renal Carcinoma”. Frontiers in Genetics 11.
+(2020).
+</p>
+</section>
+<section id="expresión-en-función-de-la-progresión-del-crcc"
+class="slide level3">
+<h3>Expresión en función de la progresión del CRcc</h3>
+<img src="img/BoxPlot_genesProgression.png" width="70%">
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">[3]</a>Jose Maria Zamora-Fuentes, et
+al. “Gene Expression and Co-expression Networks Are Strongly Altered
+Through Stages in Clear Cell Renal Carcinoma”. Frontiers in Genetics 11.
+(2020).
+</p>
+</section>
+<section id="regulación-genética-por-micrornas" class="slide level3">
+<h3>Regulación genética por microRNAs</h3>
+</section>
+<section id="redes-de-coexpresión-mirna-gen" class="slide level3">
+<h3>Redes de coexpresión miRNA-gen</h3>
+<p><img src="img/miRNAs-Networks.png" width="50%"></p>
+</section>
+<section id="mir217-en-las-transiciones-de-ccrc" class="slide level3">
+<h3>mir217 en las transiciones de ccRC</h3>
+<p><img src="img/miRNAs-Net-zoom.png" width="70%"></p>
+</section>
+<section id="mir217---modelo" class="slide level3">
+<h3>mir217 - Modelo</h3>
+<img src="img/miR-217.png" width="90%">
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">[3]</a>Jose Maria Zamora-Fuentes, et
+al. “miR-217 regulates different oncogenes during clear cell renal
+carcinoma progression”. Frontiers in Genetics (Revisión).
+</p>
+</section>
+<section id="regulación-genética-por-metilación" class="slide level3">
+<h3>Regulación genética por Metilación</h3>
+</section>
+<section id="genes-afectados-por-la-metilación" class="slide level3">
+<h3>Genes afectados por la metilación</h3>
+<p><img src="img/meth-venns.png" width="100%"></p>
+</section>
+<section id="criterio-funcional-hipometilados" class="slide level3">
+<h3>Criterio funcional (Hipometilados)</h3>
+<p><img src="img/meth-overHipo.png" width="70%"></p>
+</section>
+<section id="criterio-funcional-hipermetilados" class="slide level3">
+<h3>Criterio funcional (Hipermetilados)</h3>
+<p><img src="img/meth-underHyper.png" width="90%"></p>
+</section>
+<section id="enriquecimiento-funcional-de-las-4-etapas"
+class="slide level3">
+<h3>Enriquecimiento funcional de las 4 etapas</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Metilación</th>
+<th style="text-align: center;">Gene núcleo</th>
+<th style="text-align: right;">Función Biológica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">hypo</td>
+<td style="text-align: center;">ITK</td>
+<td style="text-align: right;">Activación de células T</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">hyper</td>
+<td style="text-align: center;">RAB25</td>
+<td style="text-align: right;">Supresor tumoral</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="resumen" class="slide level3">
+<h3>Resumen</h3>
+</section>
+<section id="conclusiones" class="slide level3">
+<h3>Conclusiones</h3>
+<p><img src="img/resumen-final.png" width="75%"></p>
+</section>
+<section id="implicaciones-1" class="slide level3">
+<h3>Implicaciones (1)</h3>
+<ul>
+<li>La identificación de factores genéticos y epigenéticos son resultado
+de experimentos complejos. Este tipo de métodos computacionales pueden
+proveer de nuevas hipótesis (ingeniería reversa) con un relativo bajo
+costo.</li>
+<li>Los resultados in-silico pueden generar evidencia de biomarcadores
+con potencial aplicación clínica.</li>
+</ul>
+</section>
+<section id="implicaciones-2" class="slide level3">
+<h3>Implicaciones (2)</h3>
+<ul>
+<li>Los resultados de estos experimentos computacionales destacan el
+impacto del carácter inmunológico del cáncer.</li>
+<li>El programa de expresión en cáncer tiene afectaciones debido a
+patrones regulares en genes específicos que se amplifican como un
+sistema biológico complejo.</li>
+</ul>
+</section>
+<section id="estudiantes-interesados" class="slide level3">
+<h3>Estudiantes interesados</h3>
+<ul>
+<li>Skills:
+<ul>
+<li>Programación en R y Python</li>
+<li>Manejo de bases de datos SQL</li>
+<li>Desarrollo de Apps (Javascript)</li>
+<li>Conceptos básicos de Biología Molecular</li>
+<li>Conceptos básicos de emfermedades crónico-degenerativas.</li>
+</ul></li>
+<li>Proyectos
+<ul>
+<li>Servicio social</li>
+<li>Titulación Licenciatura y Maestría</li>
+<li>Estancias en empresas privadas.</li>
+</ul></li>
+</ul>
+</section>
+<section id="expresión-diferencial-mrna" class="slide level3">
+<h3>Expresión diferencial (mRNA)</h3>
+<p><img src="img/mRNA-diffexp.jpeg" width="75%"></p>
+</section>
+<section id="expresión-diferencial-mirna" class="slide level3">
+<h3>Expresión Diferencial (miRNA)</h3>
+<p><img src="img/miRNAs-etapas_contiguas.png" width="90%"></p>
+</section>
+<section id="ccrc---cnvs-amplificaciones" class="slide level3">
+<h3>ccRC - CNVS (Amplificaciones)</h3>
+<p><img src="img/CNVS-expr-amps-kirc.png" width="80%"></p>
+</section>
+<section id="mir-217-en-pubmed" class="slide level3">
+<h3>mir-217 en Pubmed</h3>
+<p><img src="img/pubmed-mir217.png" width="60%"></p>
+</section>
+<section id="mutaciones-en-ccrc" class="slide level3">
+<h3>Mutaciones en ccRC</h3>
+<p><img src="img/mutaciones.png" width="60%"></p>
+</section>
+<section id="cáncer-en-méxico" class="slide level3">
+<h3>Cáncer en México</h3>
+<img src="img/globocan-cancer-kidney-mex.png" width="80%">
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">Globocan </a>https://gco.iarc.fr/today
+</p>
+</section>
+<section id="aumento-de-cáncer-de-riñon-en-hombres"
+class="slide level3">
+<h3>Aumento de Cáncer de riñon en hombres</h3>
+<p><img src="img/globocan-time-kidney-mex.png" width="50%"></p>
+</section>
+<section id="base-de-datos-tcga---tejidos" class="slide level3">
+<h3>Base de datos TCGA - Tejidos</h3>
+<img src="img/tcga-db1.png" width="100%">
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">TCGA </a>https://portal.gdc.cancer.gov/
+</p>
+</section>
+<section id="datos-de-secuenciación-tcga" class="slide level3">
+<h3>Datos de secuenciación TCGA</h3>
+<img src="img/tcga-db2.png" width="100%">
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">TCGA </a>https://portal.gdc.cancer.gov/
+</p>
+</section>
+<section id="método-de-selección-de-genes-metilados"
+class="slide level3">
+<h3>Método de selección de genes metilados</h3>
+<p><img src="img/pipeline-meth.png" width="80%"></p>
+</section>
+<section id="biogénesis-de-mirnas-canónica" class="slide level3">
+<h3>Biogénesis de miRNAs (canónica)</h3>
+<img src="img/microRNAs-biogenesis.png" width="90%">
+<p style="font-size: 14px; text-align: left;">
+<a target="_blank" href="">Biorender </a>https://biorender.com/
+</p>
+</section>
+<section id="artículos-publicados" class="slide level3">
+<h3>Artículos publicados</h3>
+<ol type="1">
+<li>Gene Expression and Co-expression Networks Are Strongly Altered
+Through Stages in Clear Cell Renal Carcinoma. (F. Genetics, 2020)</li>
+<li>Gene co-expression in breast cancer: a matter of distance. (F.
+Oncology, 2021)</li>
+<li>Loss of long distance co-expression in lung cancer (F. Genetics,
+2021)</li>
+<li>Oncogenic Role of miR-217 During Clear Cell Renal Carcinoma
+Progression. (F. Oncology, 2022)</li>
+<li>Methylation-related genes involved in renal carcinoma progression
+(F. Genetics, 2023)</li>
+</ol>
+</section>
+<section id="colaboraciones-actuales" class="slide level3">
+<h3>Colaboraciones actuales</h3>
+<ul>
+<li>Dr. Alejandro Carranca (INCAN)</li>
+<li>Dra. Patricia García (INCAN)</li>
+<li>Dra. María Gloria Soldevila (IIBO-UNAM)</li>
+<li>Dr. Felipe Vadillo Ortega (INMEGEN)</li>
+</ul>
+</section>
+<section id="agradecimientos" class="slide level3">
+<h3>Agradecimientos</h3>
+<ul>
+<li>A mis compañeros de grupo</li>
+<li>A mi tutor</li>
+<li>A mi comité tutoral</li>
+<li>A mis profesores</li>
+<li>CONACYT (cvu 267236)</li>
+<li>UNAM, IE e INMEGEN</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'h.v',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
